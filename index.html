@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitMove | Online Calisthenics Coach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .hero {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://i.pinimg.com/474x/7d/ab/36/7dab366ba4ec4013637117176b94ebed.jpg');
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .text-red-primary {
+      color: #e53e3e;
+    }
+    .bg-red-primary {
+      background-color: #e53e3e;
+    }
+    .hover-scale:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+    .card-hover:hover {
+      box-shadow: 0 10px 15px -3px rgba(229, 62, 62, 0.2), 0 4px 6px -2px rgba(229, 62, 62, 0.1);
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+    }
+    .program-card {
+      transition: all 0.3s ease;
+    }
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
+</head>
+<body class="bg-white">
+  <!-- Navbar -->
+  <nav class="fixed w-full z-50 bg-white shadow-md">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold flex items-center">
+        <span class="text-red-primary">Ipay</span>Move
+      </a>
+      <div class="hidden md:flex space-x-8">
+        <a href="#about" class="hover:text-red-primary transition">About</a>
+        <a href="#services" class="hover:text-red-primary transition">Service</a>
+        
+        <a href="#testimonials" class="hover:text-red-primary transition">Testimoni</a>
+        <a href="#contact" class="hover:text-red-primary transition">Contact</a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden text-gray-800">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+      <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+        <a href="#about" class="py-2 hover:text-red-primary transition">About</a>
+        <a href="#services" class="py-2 hover:text-red-primary transition">Service</a>
+       
+        <a href="#testimonials" class="py-2 hover:text-red-primary transition">Testimoni</a>
+        <a href="#contact" class="py-2 hover:text-red-primary transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero h-screen flex items-center justify-center">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">TRANSFORMASI TUBUH ANDA <br>DENGAN <span class="text-red-primary">CALISTHENICS</span></h1>
+      <p class="text-xl text-gray-200 mb-8">Spesialis calisthenics seperti, dynamic freestyle, handstand, planche  dan gerakan calisthenics lainnya</p>
+      <div class="flex flex-col md:flex-row justify-center gap-4">
+        <a href="#contact" class="bg-red-primary text-white font-bold py-3 px-8 rounded-full hover:bg-red-600 transition hover-scale">Mulai Sekarang</a>
+        <a href="#programs" class="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-gray-900 transition hover-scale">Lihat Program</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+          <img src="/img/update img.jpg" alt="Coach" class="rounded-lg shadow-xl animate-float">
+        </div>
+        <div class="md:w-1/2">
+          <h2 class="text-3xl font-bold mb-6">Tentang <span class="text-red-primary">Saya</span></h2>
+          <p class="text-gray-700 mb-4">Halo! Saya adalah pelatih calisthenics bersertifikat dengan pengalaman lebih dari 5 tahun dalam melatih berbagai tingkat kemampuan, dari pemula hingga atlet lanjutan.</p>
+          <p class="text-gray-700 mb-4">Perjalanan calisthenics saya dimulai dengan kecintaan pada gerak tubuh dan kebebasan berekspresi melalui latihan dengan berat badan. Saya telah menguasai berbagai gerakan calisthenics tingkat lanjut seperti:</p>
+          <ul class="mb-6 text-gray-700">
+            <li class="flex items-center mb-2">
+              <i class="fas fa-check-circle text-red-primary mr-2"></i>
+              Handstand dan variasi handstand
+            </li>
+            <li class="flex items-center mb-2">
+              <i class="fas fa-check-circle text-red-primary mr-2"></i>
+              Dynamic freestyle dan gerakan flow
+            </li>
+            <li class="flex items-center mb-2">
+              <i class="fas fa-check-circle text-red-primary mr-2"></i>
+              Front lever, back lever, dan human flag
+            </li>
+            <li class="flex items-center mb-2">
+              <i class="fas fa-check-circle text-red-primary mr-2"></i>
+              Planche dan gerakan kekuatan lainnya
+            </li>
+          </ul>
+          <p class="text-gray-700 mb-6">Filosofi pelatihan saya berfokus pada keselamatan, teknik yang tepat, dan pendekatan yang disesuaikan dengan kebutuhan dan tujuan setiap individu.</p>
+          <div class="flex flex-wrap gap-4">
+            <!-- <div class="flex flex-col items-center">
+              <span class="text-3xl font-bold text-red-primary">100+</span>
+              <span class="text-sm text-gray-600">Klien Sukses</span>
+            </div> -->
+            <div class="flex flex-col items-center">
+              <span class="text-3xl font-bold text-red-primary">3+</span>
+              <span class="text-sm text-gray-600">Tahun Pengalaman</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <span class="text-3xl font-bold text-red-primary">5+</span>
+              <span class="text-sm text-gray-600">Gerakan Master</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section id="services" class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Layanan <span class="text-red-primary">Pelatihan</span></h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Saya menawarkan berbagai layanan pelatihan calisthenics yang disesuaikan dengan kebutuhan dan tingkat kemampuan Anda.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-lg shadow-lg card-hover">
+          <div class="text-red-primary text-4xl mb-4">
+            <i class="fas fa-video"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Online Coaching</h3>
+          <p class="text-gray-600 mb-4">Dapatkan program pelatihan yang disesuaikan dan umpan balik video melalui platform online. Ideal untuk mereka yang menginginkan fleksibilitas.</p>
+          <ul class="mb-6 text-gray-700">
+            <li class="flex items-center mb-2">
+              <i class="fas fa-check text-red-primary mr-2"></i>
+              Program latihan mingguan
+            </li>
+            <li class="flex items-center mb-2">
+              <i class="fas fa-check text-red-primary mr-2"></i>
+              Analisis video dan umpan balik
+            </li>
+            <li class="flex items-center mb-2">
+              <i class="fas fa-check text-red-primary mr-2"></i>
+              Dukungan WhatsApp 24/7
+            </li>
+          </ul>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-lg card-hover">
+          <div class="text-red-primary text-4xl mb-4">
+            <i class="fas fa-laptop"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Sesi 1-on-1 Virtual</h3>
+          <p class="text-gray-600 mb-4">Sesi pelatihan langsung secara virtual melalui WhatsApp. Dapatkan umpan balik secara real-time dan koreksi teknik.</p>
+          <ul class="mb-6 text-gray-700">
+            <li class="flex items-center mb-2">
+              <i class="fas fa-check text-red-primary mr-2"></i>
+              Sesi video call interaktif
+            </li>
+            <li class="flex items-center mb-2">
+              <i class="fas fa-check text-red-primary mr-2"></i>
+              Pelatihan yang dipersonalisasi
+            </li>
+            <li class="flex items-center mb-2">
+              <i class="fas fa-check text-red-primary mr-2"></i>
+              Kemajuan yang dipantau
+            </li>
+          </ul>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-lg card-hover">
+          <div class="text-red-primary text-4xl mb-4">
+            <i class="fas fa-dumbbell"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Program Spesialisasi</h3>
+          <p class="text-gray-600 mb-4">Program khusus yang berfokus pada penguasaan keterampilan tertentu seperti handstand, planche, atau dynamic freestyle.</p>
+          <ul class="mb-6 text-gray-700">
+            <li class="flex items-center mb-2">
+              <i class="fas fa-check text-red-primary mr-2"></i>
+              Fokus pada satu keterampilan
+            </li>
+            <li class="flex items-center mb-2">
+              <i class="fas fa-check text-red-primary mr-2"></i>
+              Progresi bertahap
+            </li>
+            <li class="flex items-center mb-2">
+              <i class="fas fa-check text-red-primary mr-2"></i>
+              Materi pelatihan mendalam
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Gallery Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Galeri <span class="text-red-primary">Prestasi</span></h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Beberapa gerakan dan prestasi calisthenics yang telah saya kuasai.</p>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img src="/api/placeholder/300/300" alt="Handstand" class="w-full h-full object-cover rounded-lg hover:opacity-80 transition cursor-pointer">
+        <img src="/api/placeholder/300/300" alt="Front Lever" class="w-full h-full object-cover rounded-lg hover:opacity-80 transition cursor-pointer">
+        <img src="/api/placeholder/300/300" alt="Human Flag" class="w-full h-full object-cover rounded-lg hover:opacity-80 transition cursor-pointer">
+        <img src="/api/placeholder/300/300" alt="Planche" class="w-full h-full object-cover rounded-lg hover:opacity-80 transition cursor-pointer">
+        <img src="/api/placeholder/300/300" alt="Back Lever" class="w-full h-full object-cover rounded-lg hover:opacity-80 transition cursor-pointer">
+        <img src="/api/placeholder/300/300" alt="Muscle Up" class="w-full h-full object-cover rounded-lg hover:opacity-80 transition cursor-pointer">
+        <img src="/api/placeholder/300/300" alt="Handstand Pushup" class="w-full h-full object-cover rounded-lg hover:opacity-80 transition cursor-pointer">
+        <img src="/api/placeholder/300/300" alt="Dynamic Freestyle" class="w-full h-full object-cover rounded-lg hover:opacity-80 transition cursor-pointer">
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <!-- <section id="testimonials" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Testimoni <span class="text-red-primary">Klien</span></h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Apa kata klien tentang program pelatihan saya.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-lg shadow-lg relative">
+          <div class="text-red-primary text-4xl absolute -top-5 -left-3">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <div class="mb-4 flex">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+          <p class="text-gray-600 mb-6">
+            "Setelah 3 bulan berlatih, saya akhirnya bisa melakukan handstand selama 30 detik! Coach memberikan program yang terstruktur dan selalu sabar dalam membimbing."
+          </p>
+          <div class="flex items-center">
+            <img src="/api/placeholder/50/50" alt="Client" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-bold">Budi Santoso</h4>
+              <span class="text-gray-500 text-sm">Pekerja kantoran</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-lg relative">
+          <div class="text-red-primary text-4xl absolute -top-5 -left-3">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <div class="mb-4 flex">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+          <p class="text-gray-600 mb-6">
+            "Program pelatihan online sangat praktis dan efektif. Coach selalu memberikan umpan balik detail untuk setiap video yang saya kirim. Sekarang saya bisa melakukan muscle up!"
+          </p>
+          <div class="flex items-center">
+            <img src="/api/placeholder/50/50" alt="Client" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-bold">Siti Nurhaliza</h4>
+              <span class="text-gray-500 text-sm">Mahasiswa</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-lg relative">
+          <div class="text-red-primary text-4xl absolute -top-5 -left-3">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <div class="mb-4 flex">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+          <p class="text-gray-600 mb-6">
+            "Saya sudah mencoba beberapa pelatih online sebelumnya, tapi program ini benar-benar berbeda. Pendekatannya sangat personal dan tekniknya luar biasa!"
+          </p>
+          <div class="flex items-center">
+            <img src="/api/placeholder/50/50" alt="Client" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-bold">Ahmad Ridwan</h4>
+              <span class="text-gray-500 text-sm">Pengusaha</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gray-900 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Siap Untuk <span class="text-red-primary">Transformasi</span>?</h2>
+      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Mulai perjalanan calisthenics Anda dan kuasai gerakan-gerakan yang selama ini Anda impikan.</p>
+      <a href="#contact" class="inline-block bg-red-primary text-white font-bold py-3 px-8 rounded-full hover:bg-red-600 transition hover-scale">Mulai Sekarang</a>
+    </div>
+  </section>
+
+  <!-- Contact Section (REVISI: dengan kartu untuk email & WhatsApp) -->
+  <section id="contact" class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Hubungi <span class="text-red-primary">Saya</span></h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Tertarik dengan program pelatihan saya? Hubungi saya untuk konsultasi gratis dan informasi lebih lanjut.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <!-- Email Contact Card -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+          <div class="bg-red-primary text-white p-6 text-center">
+            <div class="text-3xl mb-2">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3 class="text-xl font-bold">Email</h3>
+          </div>
+          <div class="p-8 text-center">
+            <p class="text-gray-600 mb-6">Kirim saya pesan melalui email untuk mendapatkan informasi lebih detail tentang program pelatihan.</p>
+            <a href="mailto:your.ipaymuhamadrifaldi@gmail.com" class="inline-block bg-red-primary text-white font-bold py-3 px-8 rounded-full hover:bg-red-600 transition hover-scale">
+              <i class="fas fa-envelope mr-2"></i> Kirim Email
+            </a>
+          </div>
+        </div>
+        
+        <!-- WhatsApp Contact Card -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+          <div class="bg-green-500 text-white p-6 text-center">
+            <div class="text-3xl mb-2">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <h3 class="text-xl font-bold">WhatsApp</h3>
+          </div>
+          <div class="p-8 text-center">
+            <p class="text-gray-600 mb-6">Hubungi saya melalui WhatsApp untuk konsultasi cepat dan informasi program pelatihan.</p>
+            <a href="https://wa.me/628987642662" target="_blank" class="inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-full hover:bg-green-600 transition hover-scale">
+              <i class="fab fa-whatsapp mr-2"></i> Chat WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <h2 class="text-2xl font-bold flex items-center">
+            <span class="text-red-primary">Fit</span>Move
+          </h2>
+          <p class="text-gray-400 mt-2">Online Calisthenics Coach</p>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://www.instagram.com/ipay_sw/" class="text-white hover:text-red-primary transition">
+            <i class="fab fa-instagram text-xl"></i>
+          </a>
+          <a href="#" class="text-white hover:text-red-primary transition">
+            <i class="fab fa-youtube text-xl"></i>
+          </a>
+          
+          </div>
+
+          </div>
+          </div>
+          </footer>
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const mobileMenuButton = document.getElementById('mobile-menu-button');
+              const mobileMenu = document.getElementById('mobile-menu');
+        
+              mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+              });
+        
+              // Close mobile menu when a link is clicked
+              const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+              mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                  mobileMenu.classList.add('hidden');
+                });
+              });
+            });
+          </script>
+          </body>
+          </html>
+    
